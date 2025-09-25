@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { url } from "../assets/assets"; 
 
 const AuthContext = createContext();
 
@@ -29,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:4000/api/user/login", {
+      const response = await fetch(`${url}/api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +57,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:4000/api/user/register", {
+      const response = await fetch(`${url}/api/user/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

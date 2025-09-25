@@ -3,6 +3,7 @@ import { useCart } from "../components/CartContext";
 import { useAuth } from "../components/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./PlaceOrder.css";
+import { url } from "../assets/assets";
 
 const loadRazorpayScript = () => {
   return new Promise((resolve) => {
@@ -67,7 +68,7 @@ const PlaceOrder = () => {
     setSubmitting(true);
     try {
       // 1) Create order on backend and get Razorpay order id
-      const resp = await fetch("http://localhost:4000/api/order/place", {
+      const resp = await fetch(`${url}/api/order/place`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +110,7 @@ const PlaceOrder = () => {
         handler: async function (response) {
           try {
             const verifyResp = await fetch(
-              "http://localhost:4000/api/order/verify",
+              `${url}/api/order/verify`,
               {
                 method: "POST",
                 headers: {

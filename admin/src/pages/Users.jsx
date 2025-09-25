@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Users.css";
+import { url } from "../assets/assets";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -8,7 +9,7 @@ const Users = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const resp = await fetch("http://localhost:4000/api/user/users");
+      const resp = await fetch(`${url}/api/user/users`);
       const data = await resp.json();
       if (data.success) {
         setUsers(data.data);

@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react";
 import { useAuth } from "./AuthContext";
+import { url } from "../assets/assets";
 
 const CartContext = createContext(null);
 
@@ -19,7 +20,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/food/list");
+        const response = await fetch(`${url}/api/food/list`);
         const data = await response.json();
         if (data.success) {
           setFoods(data.data);
@@ -47,7 +48,7 @@ export const CartProvider = ({ children }) => {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:4000/api/cart/", {
+      const response = await fetch(`${url}/api/cart/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -73,7 +74,7 @@ export const CartProvider = ({ children }) => {
 
     try {
       // Clear existing cart
-      await fetch("http://localhost:4000/api/cart/clear", {
+      await fetch(`${url}/api/cart/clear`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -83,7 +84,7 @@ export const CartProvider = ({ children }) => {
       // Add items to cart
       for (const [foodId, quantity] of Object.entries(newQuantities)) {
         if (quantity > 0) {
-          await fetch("http://localhost:4000/api/cart/add", {
+          await fetch(`${url}/api/cart/add`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -137,7 +138,7 @@ export const CartProvider = ({ children }) => {
 
     if (user && token) {
       try {
-        await fetch("http://localhost:4000/api/cart/clear", {
+        await fetch(`${url}/api/cart/clear`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -161,7 +162,7 @@ export const CartProvider = ({ children }) => {
         id: food._id,
         itemname: food.name,
         price: `₹${food.price}`,
-        img: `http://localhost:4000/images/${food.image}`,
+        img: `${url}/images/${food.image}`,
       };
     });
     return map;

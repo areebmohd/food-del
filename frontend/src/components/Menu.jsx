@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import { useCart } from "./CartContext";
+import { url } from "../assets/assets";
 
 const Menu = () => {
   const [foods, setFoods] = useState([]);
@@ -12,7 +13,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/food/list");
+        const response = await fetch(`${url}/api/food/list`);
         const data = await response.json();
 
         if (data.success && Array.isArray(data.data)) {
@@ -60,7 +61,7 @@ const Menu = () => {
                       key={item._id ?? index}
                     >
                       <img
-                        src={`http://localhost:4000/images/${item.image}`}
+                        src={`${url}/images/${item.image}`}
                         alt={item.name}
                       />
                       <div className="content">

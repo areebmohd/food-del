@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./List.css";
+import { url } from "../assets/assets";
 
 const List = () => {
   const [foods, setFoods] = useState([]);
@@ -10,7 +11,7 @@ const List = () => {
   const fetchFoods = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:4000/api/food/list");
+      const response = await fetch(`${url}/api/food/list`);
       const result = await response.json();
 
       if (result.success) {
@@ -30,7 +31,7 @@ const List = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this food item?")) {
       try {
-        const response = await fetch("http://localhost:4000/api/food/remove", {
+        const response = await fetch(`${url}/api/food/remove`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -100,7 +101,7 @@ const List = () => {
                 <div key={food._id} className="food-item">
                   <div className="food-col image">
                     <img
-                      src={`http://localhost:4000/images/${food.image}`}
+                      src={`${url}/images/${food.image}`}
                       alt={food.name}
                       className="food-img"
                     />

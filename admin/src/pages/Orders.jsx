@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Orders.css";
+import { url } from "../assets/assets";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -8,7 +9,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     setLoading(true);
     try {
-      const resp = await fetch("http://localhost:4000/api/order/all");
+      const resp = await fetch(`${url}/api/order/all`);
       const data = await resp.json();
       if (data.success) setOrders(data.data);
     } catch (e) {
@@ -24,7 +25,7 @@ const Orders = () => {
 
   const updateStatus = async (id, status) => {
     try {
-      const resp = await fetch(`http://localhost:4000/api/order/status/${id}`, {
+      const resp = await fetch(`${url}/api/order/status/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),

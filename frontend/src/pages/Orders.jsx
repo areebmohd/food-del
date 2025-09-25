@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../components/AuthContext";
 import "./Orders.css";
+import { url } from "../assets/assets";
 
 const statusBadge = (status) => {
   const map = {
@@ -23,7 +24,7 @@ const Orders = () => {
     const fetchOrders = async () => {
       setLoading(true);
       try {
-        const resp = await fetch("http://localhost:4000/api/order/my", {
+        const resp = await fetch(`${url}/api/order/my`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await resp.json();

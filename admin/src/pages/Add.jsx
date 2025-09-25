@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Add.css";
+import { url } from "../assets/assets";
 
 const Add = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +76,7 @@ const Add = () => {
       formDataToSend.append("description", formData.description.trim());
       formDataToSend.append("image", image);
 
-      const response = await fetch("http://localhost:4000/api/food/add", {
+      const response = await fetch(`${url}/api/food/add`, {
         method: "POST",
         body: formDataToSend,
       });
