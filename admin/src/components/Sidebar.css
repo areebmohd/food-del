@@ -1,0 +1,21 @@
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 15%;
+  border-right: 1px solid gray;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.link {
+  color: blue;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.active {
+  color: green;
+  background-color: rgb(209, 255, 209);
+}

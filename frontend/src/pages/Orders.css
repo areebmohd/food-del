@@ -1,0 +1,83 @@
+.orders-page {
+  padding: 20px;
+}
+.orders-page h2 {
+  margin-bottom: 16px;
+}
+.orders-list {
+  display: grid;
+  gap: 12px;
+}
+.order-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  padding: 14px;
+  border: 1.5px solid #e5e7eb;
+}
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.order-id {
+  font-weight: 700;
+}
+.order-date {
+  font-size: 12px;
+  color: #6b7280;
+}
+.order-status {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.order-items {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0;
+}
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+}
+.order-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 8px;
+}
+.addr .label {
+  font-size: 12px;
+  color: #6b7280;
+}
+.addr .text {
+  font-size: 14px;
+  color: #111827;
+}
+.pay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.pay .amount {
+  font-weight: 700;
+}
+.pay-status {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.pay-status.paid {
+  background: #dcfce7;
+  color: #14532d;
+}
+.pay-status.unpaid {
+  background: #fee2e2;
+  color: #991b1b;
+}

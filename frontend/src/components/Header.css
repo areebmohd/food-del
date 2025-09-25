@@ -1,0 +1,59 @@
+.header {
+  height: 50vh;
+  background: url("../assets/foodHeader.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  margin-top: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 150px;
+}
+
+.header p {
+  color: white;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.header button {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: larger;
+  width: fit-content;
+}
+
+@media (max-width: 1240px) {
+  .header {
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 25px;
+  }
+
+  .header .content {
+    gap: 8px;
+    padding-left: 60px;
+  }
+
+  .header p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .header button {
+    padding: 2px 7px;
+    font-size: 10px;
+  }
+}

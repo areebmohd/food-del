@@ -1,0 +1,66 @@
+.loginPage {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #00000090;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginBox {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 350px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.close {
+  cursor: pointer;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputs input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.main button {
+  cursor: pointer;
+  padding: 8px 25px;
+  background-color: limegreen;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: large;
+  width: fit-content;
+  place-self: center;
+  margin-top: 10px;
+}
+.checkBox,
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.checkBox input {
+  height: 20px;
+  cursor: pointer;
+}
+.switch span {
+  color: green;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

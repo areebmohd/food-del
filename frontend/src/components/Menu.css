@@ -1,0 +1,154 @@
+.menu {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+.loading {
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+  padding: 50px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+.heading {
+  font-size: xx-large;
+}
+.mainMenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.foodBox {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.foodBox:hover {
+  transform: translateY(-5px);
+}
+.foodBox img {
+  height: 250px;
+  width: 450px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.drinks img {
+  height: 350px;
+  width: 350px;
+}
+.content {
+  padding: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title p {
+  font-size: x-large;
+}
+.description {
+  color: rgb(58, 58, 58);
+}
+.cartButton {
+  background-color: rgb(220, 252, 231);
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: large;
+  cursor: pointer;
+}
+.cartButton:hover {
+  background-color: rgb(205, 253, 222);
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon {
+  padding: 1px 13px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+.plus {
+  background-color: rgb(173, 253, 173);
+  color: green;
+}
+.minus {
+  background-color: rgb(254, 182, 182);
+  color: red;
+}
+.quantity {
+  font-size: large;
+}
+@media (max-width: 1240px) {
+  .menu {
+    margin-top: 0px;
+  }
+  .categories {
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .heading {
+    font-size: x-large;
+  }
+  .mainMenu {
+    gap: 25px;
+  }
+  .foodBox {
+    max-width: 350px;
+  }
+  .drinks {
+    max-width: 150px;
+  }
+  .foodBox img {
+    height: 150px;
+    width: 350px;
+  }
+  .drinks img {
+    height: 150px;
+    width: 150px;
+  }
+  .content {
+    padding: 10px;
+    padding-top: 5px;
+    gap: 5px;
+  }
+  .title p {
+    font-size: large;
+  }
+  .drinksTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+  .cartButton {
+    padding: 10px 20px;
+    font-size: small;
+  }
+  .icons {
+    gap: 10px;
+  }
+  .icon {
+    padding: 1px 13px;
+    font-size: 20px;
+  }
+}

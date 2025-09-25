@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.navLeft {
+  color: green;
+}
+
+.navMid {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  color: #49557e;
+}
+
+.navMid li {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navMid .link {
+  text-decoration: none;
+  color: #49557e;
+}
+
+.navMid .active {
+  border-bottom: 2px solid green;
+  padding-bottom: 3px;
+  text-decoration: none;
+  color: #49557e;
+}
+
+.navRight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navRight svg {
+  cursor: pointer;
+  height: 30px;
+  fill: #49557e;
+  padding-top: 5px;
+}
+
+.navRight .btn {
+  background-color: white;
+  border: 1px solid green;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: #49557e;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navRight .btn:hover {
+  background-color: rgb(243, 252, 245);
+}
+
+.user-email {
+  color: #49557e;
+  font-size: 14px;
+}
+
+@media (max-width: 1240px) {
+  .navMid {
+    position: absolute;
+    top: 55px;
+  }
+}
