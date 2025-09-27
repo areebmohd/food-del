@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ setShowLoginPage }) => {
-  const [value, setValue] = useState("Home");
+const Navbar = ({ setShowLoginPage, value, setValue }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 

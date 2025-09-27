@@ -16,7 +16,7 @@ const loadRazorpayScript = () => {
   });
 };
 
-const PlaceOrder = () => {
+const PlaceOrder = ({setValue}) => {
   const {
     cartItems,
     subtotal,
@@ -131,6 +131,7 @@ const PlaceOrder = () => {
               );
             await clear();
             navigate("/orders", { replace: true });
+            setValue("Orders");
           } catch (err) {
             alert(err.message || "Verification error");
           }

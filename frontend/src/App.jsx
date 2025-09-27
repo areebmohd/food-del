@@ -12,6 +12,7 @@ import Orders from "./pages/Orders";
 
 function App() {
   const [showLoginPage, setShowLoginPage] = useState(false);
+  const [value, setValue] = useState("Home");
 
   return (
     <>
@@ -24,11 +25,11 @@ function App() {
         <div className="page">
           <div className="app">
             <CartProvider>
-              <Navbar setShowLoginPage={setShowLoginPage} />
+              <Navbar setShowLoginPage={setShowLoginPage} value={value} setValue={setValue}/>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/placeorder" element={<PlaceOrder />} />
+                <Route path="/placeorder" element={<PlaceOrder setValue={setValue}/>} />
                 <Route path="/orders" element={<Orders />} />
               </Routes>
             </CartProvider>

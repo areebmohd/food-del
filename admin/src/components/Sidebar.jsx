@@ -5,7 +5,7 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sideBar">
-      <NavLink to="/add" className="link">
+      <NavLink to="/" className="link">
         Add Item
       </NavLink>
       <NavLink to="/list" className="link">
